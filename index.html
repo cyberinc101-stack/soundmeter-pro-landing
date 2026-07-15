@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sound Meter Pro – Decibel Meter App | Live dB Readings, Noise Level Tracker</title>
+  <meta name="description" content="Sound Meter Pro measures real-time decibel levels using your phone's microphone. Live dB gauge, waveform graph, health & safety analysis, measurement history, and 10+ languages. Free on Android.">
+  <meta name="keywords" content="sound meter app, decibel meter, noise level meter, dB meter android, sound level meter free, noise pollution app, decibel reader, sound measurement app, noise meter, db meter app google play">
+  <meta property="og:title" content="Sound Meter Pro – Real-Time Decibel Meter">
+  <meta property="og:description" content="Measure sound levels instantly. Live gauge, waveform, health safety analysis, history. Free.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="sm-styles.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="nav-brand">
+        <img src="app-icon.png" alt="Sound Meter Pro icon" class="nav-icon">
+        <span class="brand-name">Sound<span class="brand-accent">Meter</span> Pro</span>
+      </div>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#screenshots">Screenshots</a>
+        <a href="#reference">dB Guide</a>
+        <a href="#download" class="nav-cta">Free Download</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="hero-eyebrow">Real-Time Decibel Meter App</div>
+        <h1>Measure <span class="grad-text">Sound.</span><br>Protect Your <span class="grad-text">Hearing.</span></h1>
+        <p class="hero-sub">Turn your phone into a professional-grade sound level meter. Live decibel readings, colour-coded gauge, waveform history, health analysis, and one-tap sharing — completely free.</p>
+        <div class="hero-badges">
+          <a href="https://play.google.com/store/apps/details?id=com.happyappsforyou.soundmeterpro" class="badge-btn" target="_blank">
+            <svg width="22" height="24" viewBox="0 0 22 24" fill="none"><path d="M1 1.5L13.5 12 1 22.5V1.5Z" fill="white"/><path d="M1 1.5L18 8.5L13.5 12L1 1.5Z" fill="white" opacity="0.7"/><path d="M1 22.5L18 15.5L13.5 12L1 22.5Z" fill="white" opacity="0.7"/><path d="M18 8.5L21 10.5L18 15.5L13.5 12L18 8.5Z" fill="white" opacity="0.5"/></svg>
+            <div class="badge-text"><span class="badge-sub">GET IT ON</span><span class="badge-main">Google Play</span></div>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-num">0–120</span><span class="stat-lbl">dB Range</span></div>
+          <div class="sdiv"></div>
+          <div class="stat"><span class="stat-num">Free</span><span class="stat-lbl">To Download</span></div>
+          <div class="sdiv"></div>
+          <div class="stat"><span class="stat-num">10+</span><span class="stat-lbl">Languages</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <!-- Animated gauge SVG -->
+        <div class="gauge-wrap">
+          <svg class="gauge-svg" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+            <!-- Track -->
+            <path d="M 30 170 A 120 120 0 0 1 270 170" fill="none" stroke="#222" stroke-width="18" stroke-linecap="round"/>
+            <!-- Green segment -->
+            <path d="M 30 170 A 120 120 0 0 1 112 58" fill="none" stroke="#00E676" stroke-width="18" stroke-linecap="round" opacity="0.9"/>
+            <!-- Yellow segment -->
+            <path d="M 112 58 A 120 120 0 0 1 188 58" fill="none" stroke="#FFD600" stroke-width="18" stroke-linecap="round" opacity="0.9"/>
+            <!-- Orange segment -->
+            <path d="M 188 58 A 120 120 0 0 1 240 100" fill="none" stroke="#FF6D00" stroke-width="18" stroke-linecap="round" opacity="0.9"/>
+            <!-- Red segment -->
+            <path d="M 240 100 A 120 120 0 0 1 270 170" fill="none" stroke="#FF1744" stroke-width="18" stroke-linecap="round" opacity="0.9"/>
+            <!-- Needle -->
+            <line class="gauge-needle" x1="150" y1="158" x2="150" y2="60" stroke="#FF1744" stroke-width="3" stroke-linecap="round" transform-origin="150 158"/>
+            <!-- Center dot -->
+            <circle cx="150" cy="158" r="10" fill="#333" stroke="#555" stroke-width="2"/>
+            <circle cx="150" cy="158" r="5" fill="#FF1744"/>
+            <!-- dB label -->
+            <text x="150" y="140" text-anchor="middle" font-family="Space Grotesk" font-size="11" fill="#888">dB</text>
+            <!-- Scale labels -->
+            <text x="38" y="190" text-anchor="middle" font-family="Inter" font-size="10" fill="#555">0</text>
+            <text x="80" y="145" text-anchor="middle" font-family="Inter" font-size="10" fill="#555">20</text>
+            <text x="106" y="90" text-anchor="middle" font-family="Inter" font-size="10" fill="#555">40</text>
+            <text x="150" y="54" text-anchor="middle" font-family="Inter" font-size="10" fill="#555">60</text>
+            <text x="194" y="90" text-anchor="middle" font-family="Inter" font-size="10" fill="#555">80</text>
+            <text x="222" y="145" text-anchor="middle" font-family="Inter" font-size="10" fill="#555">100</text>
+            <text x="262" y="190" text-anchor="middle" font-family="Inter" font-size="10" fill="#555">120</text>
+          </svg>
+          <div class="gauge-reading">
+            <span class="gauge-num" id="gaugeNum">68.4</span>
+            <span class="gauge-unit">dB</span>
+          </div>
+          <div class="gauge-label" id="gaugeLabel">Loud</div>
+          <div class="gauge-stats">
+            <div class="gs"><span class="gs-lbl">MIN</span><span class="gs-val blue">30.6</span></div>
+            <div class="gs"><span class="gs-lbl">AVG</span><span class="gs-val amber" id="avgNum">59.5</span></div>
+            <div class="gs"><span class="gs-lbl">MAX</span><span class="gs-val red">90.1</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DB LEVEL BANNER -->
+  <div class="db-banner">
+    <div class="db-banner-inner">
+      <div class="dbl safe">🟢 0–40 dB <span>Very Quiet / Quiet</span></div>
+      <div class="dbl moderate">🟡 40–70 dB <span>Moderate</span></div>
+      <div class="dbl loud">🟠 70–90 dB <span>Loud</span></div>
+      <div class="dbl danger">🔴 90–120 dB <span>Very Loud / Danger</span></div>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-tag">Features</div>
+      <h2 class="section-title">Everything you need to <span class="grad-text">understand sound</span></h2>
+      <div class="features-grid">
+        <div class="feat-card feat-primary">
+          <div class="feat-icon">📊</div>
+          <h3>Live dB Gauge</h3>
+          <p>A real-time speedometer-style gauge sweeps from green through yellow, orange, and red as sound levels rise. Instantly see whether you're in a safe or dangerous noise environment.</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon">📈</div>
+          <h3>Live Waveform Graph</h3>
+          <p>A continuously updating waveform chart plots every second of audio. Watch noise patterns unfold in real time — colour-coded green for quiet, amber for moderate, red for danger.</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon">📋</div>
+          <h3>MIN / AVG / MAX Stats</h3>
+          <p>Three live statistics track the quietest, average, and loudest readings of your session simultaneously. Know your full noise exposure at a glance.</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon">🩺</div>
+          <h3>Health & Safety Analysis</h3>
+          <p>Every saved measurement gets a full health assessment. The app tells you whether the sound level is safe, flags extended exposure risks, and classifies your environment (Library, Office, Street, Concert, etc.).</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon">💾</div>
+          <h3>Measurement History</h3>
+          <p>Every recording is saved with its date, time, duration, and MIN/AVG/MAX stats. Browse your history, view detailed analysis for any session, download results, or share them.</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon">📤</div>
+          <h3>Download & Share</h3>
+          <p>Export any measurement directly from the history screen. Share results as a file or send them to colleagues, doctors, or landlords to document noise issues.</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon">🎯</div>
+          <h3>Microphone Calibration</h3>
+          <p>Set a known reference level (default 94 dB) and apply a manual offset to calibrate your device's microphone for more accurate professional-grade readings.</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon">🌍</div>
+          <h3>10+ Languages</h3>
+          <p>Available in English, Hindi, Korean, Bengali, Indonesian, Turkish, Vietnamese, Urdu, Polish, and more — so everyone can measure sound in their own language.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN SHOWCASE: LIVE METER -->
+  <section class="showcase sc-dark" id="meter">
+    <div class="container">
+      <div class="sc-inner">
+        <div class="sc-text">
+          <div class="section-tag">Live Measurement</div>
+          <h2>Open the app.<br><span class="grad-text">Instant readings.</span></h2>
+          <p>The moment you press play, Sound Meter Pro starts capturing decibels from your phone's microphone. The needle moves in real time, the level bar pulses on the side, and the waveform graph begins building below.</p>
+          <ul class="check-list">
+            <li>Speedometer gauge from 0–120 dB</li>
+            <li>Side-bar VU level meter for quick glance</li>
+            <li>Live timer shows session duration</li>
+            <li>Colour-coded label: Very Quiet → Loud → Danger</li>
+            <li>Tap Reset anytime to clear session stats</li>
+          </ul>
+        </div>
+        <div class="sc-phone">
+          <div class="phone-frame">
+            <img src="Screenshot_20260619_130426.jpg" alt="Sound Meter Pro live reading showing 54.5 dB Moderate with gauge and waveform graph">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOWCASE: MEASUREMENT DETAILS -->
+  <section class="showcase sc-mid">
+    <div class="container">
+      <div class="sc-inner sc-flip">
+        <div class="sc-phone">
+          <div class="phone-frame">
+            <img src="Screenshot_20260619_130523.jpg" alt="Sound Meter Pro measurement details showing 59.5 dB average with MIN MAX RANGE stats">
+          </div>
+        </div>
+        <div class="sc-text">
+          <div class="section-tag">Measurement Details</div>
+          <h2>Full session<br><span class="grad-text">breakdown.</span></h2>
+          <p>Tap any saved recording to see a complete breakdown: average level, dynamic range, date, time, and duration — all in one clear screen.</p>
+          <ul class="check-list">
+            <li>Average Level displayed prominently in colour</li>
+            <li>MIN, MAX, and dynamic RANGE values</li>
+            <li>Recording date, time, and total duration</li>
+            <li>Sound Level Over Time waveform chart</li>
+            <li>Data point count (1 reading per second)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCREENSHOTS GALLERY -->
+  <section class="screenshots" id="screenshots">
+    <div class="container">
+      <div class="section-tag">Screenshots</div>
+      <h2 class="section-title">See every <span class="grad-text">screen</span></h2>
+    </div>
+    <div class="scroll-gallery">
+      <div class="sg-item">
+        <div class="phone-frame">
+          <img src="Screenshot_20260619_130411.jpg" alt="Sound Meter Pro startup screen showing 0.0 dB ready to record">
+        </div>
+        <p>Ready to Record</p>
+      </div>
+      <div class="sg-item">
+        <div class="phone-frame">
+          <img src="Screenshot_20260619_130426.jpg" alt="Live reading 54.5 dB Moderate dark mode">
+        </div>
+        <p>Live Dark Mode</p>
+      </div>
+      <div class="sg-item">
+        <div class="phone-frame">
+          <img src="Screenshot_20260619_130613.jpg" alt="Live reading 82.9 dB Loud light mode">
+        </div>
+        <p>Live Light Mode</p>
+      </div>
+      <div class="sg-item">
+        <div class="phone-frame">
+          <img src="Screenshot_20260619_130523.jpg" alt="Measurement details average 59.5 dB with MIN MAX RANGE">
+        </div>
+        <p>Measurement Details</p>
+      </div>
+      <div class="sg-item">
+        <div class="phone-frame">
+          <img src="Screenshot_20260619_130529.jpg" alt="Sound level over time waveform chart with statistics">
+        </div>
+        <p>Waveform & Stats</p>
+      </div>
+      <div class="sg-item">
+        <div class="phone-frame">
+          <img src="Screenshot_20260619_130535.jpg" alt="Health and safety assessment showing safe within normal limits and environment classification">
+        </div>
+        <p>Health Assessment</p>
+      </div>
+      <div class="sg-item">
+        <div class="phone-frame">
+          <img src="Screenshot_20260619_130540.jpg" alt="Measurement history list with download and share buttons">
+        </div>
+        <p>Measurement History</p>
+      </div>
+      <div class="sg-item">
+        <div class="phone-frame">
+          <img src="Screenshot_20260619_130545.jpg" alt="Decibel reference guide explaining sound levels from 0 to 120 dB">
+        </div>
+        <p>Decibel Reference Guide</p>
+      </div>
+      <div class="sg-item">
+        <div class="phone-frame">
+          <img src="Screenshot_20260619_130553.jpg" alt="Microphone calibration screen with reference level 94 dB">
+        </div>
+        <p>Calibration</p>
+      </div>
+      <div class="sg-item">
+        <div class="phone-frame">
+          <img src="Screenshot_20260619_130602.jpg" alt="Language selection screen showing Hindi Korean Bengali Indonesian Turkish Vietnamese">
+        </div>
+        <p>10+ Languages</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HEALTH & SAFETY SECTION -->
+  <section class="showcase sc-dark" id="health">
+    <div class="container">
+      <div class="sc-inner">
+        <div class="sc-text">
+          <div class="section-tag">Health & Safety</div>
+          <h2>Know when sound<br><span class="grad-text">becomes harmful.</span></h2>
+          <p>Sound Meter Pro doesn't just measure — it interprets. After every recording, the app gives you a plain-English health and safety verdict with environment classification, so you always know what the numbers mean for your wellbeing.</p>
+          <div class="safety-cards">
+            <div class="safety-card safe">
+              <strong>✓ Safe – Within Normal Limits</strong>
+              <span>Ideal for sleep, work, and conversation. Safe for extended exposure.</span>
+            </div>
+            <div class="safety-card warn">
+              <strong>⚠ Moderate – Use Caution</strong>
+              <span>Consistent exposure may cause fatigue. Limit extended sessions.</span>
+            </div>
+            <div class="safety-card danger">
+              <strong>✕ Danger – Protect Your Hearing</strong>
+              <span>Above 85 dB risks hearing damage. Use protection immediately.</span>
+            </div>
+          </div>
+        </div>
+        <div class="sc-phone">
+          <div class="phone-frame">
+            <img src="Screenshot_20260619_130535.jpg" alt="Health and safety assessment showing safe within normal limits with environment classification Library Office">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DB REFERENCE SECTION -->
+  <section class="reference" id="reference">
+    <div class="container">
+      <div class="section-tag">Decibel Guide</div>
+      <h2 class="section-title">What does your <span class="grad-text">dB reading mean?</span></h2>
+      <p class="section-sub">The decibel scale is logarithmic — a 10 dB increase sounds twice as loud to the human ear. Here's your quick reference guide, built right into the app.</p>
+      <div class="ref-grid">
+        <div class="ref-card" style="--c:#00E676">
+          <div class="ref-range">0–10 dB</div>
+          <div class="ref-tag">Barely Audible</div>
+          <p>The threshold of human hearing. Pin drop, rustling leaves, normal breathing at arm's length.</p>
+        </div>
+        <div class="ref-card" style="--c:#69F0AE">
+          <div class="ref-range">20–30 dB</div>
+          <div class="ref-tag">Very Quiet</div>
+          <p>Whisper-quiet environments. Recording studios, meditation rooms, deep countryside.</p>
+        </div>
+        <div class="ref-card" style="--c:#AEEA00">
+          <div class="ref-range">40–50 dB</div>
+          <div class="ref-tag">Quiet</div>
+          <p>Library, quiet office, light rainfall. Comfortable for concentration and rest.</p>
+        </div>
+        <div class="ref-card" style="--c:#FFD600">
+          <div class="ref-range">55–65 dB</div>
+          <div class="ref-tag">Moderate</div>
+          <p>Normal conversation, background music, open-plan office. Safe for long-term exposure.</p>
+        </div>
+        <div class="ref-card" style="--c:#FF6D00">
+          <div class="ref-range">70–80 dB</div>
+          <div class="ref-tag">Loud</div>
+          <p>Busy street, vacuum cleaner, alarm clock. Begin to limit prolonged exposure.</p>
+        </div>
+        <div class="ref-card" style="--c:#FF1744">
+          <div class="ref-range">85–120 dB</div>
+          <div class="ref-tag">Danger Zone</div>
+          <p>Power tools, concerts, jet engines. Risk of permanent hearing damage without protection.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HISTORY + SHARE SECTION -->
+  <section class="showcase sc-mid">
+    <div class="container">
+      <div class="sc-inner sc-flip">
+        <div class="sc-phone">
+          <div class="phone-frame">
+            <img src="Screenshot_20260619_130540.jpg" alt="Measurement history showing multiple saved sessions with MIN AVG MAX and Download Share buttons">
+          </div>
+        </div>
+        <div class="sc-text">
+          <div class="section-tag">History & Sharing</div>
+          <h2>Save every reading.<br><span class="grad-text">Share anywhere.</span></h2>
+          <p>Your entire measurement history is stored and organised by date and time. Each entry shows MIN, AVG, and MAX at a glance — tap through for the full waveform and health report.</p>
+          <ul class="check-list">
+            <li>Auto-saved after every recording session</li>
+            <li>Browse all past measurements chronologically</li>
+            <li>Download individual sessions as files</li>
+            <li>Share directly to email, WhatsApp, or any app</li>
+            <li>Useful for noise complaints, health records, or work</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LANGUAGES -->
+  <section class="languages">
+    <div class="container">
+      <div class="section-tag">Global</div>
+      <h2 class="section-title">Speak your <span class="grad-text">language</span></h2>
+      <p class="section-sub">Sound Meter Pro works for everyone, worldwide. Choose your language on first launch and the entire app adapts instantly.</p>
+      <div class="lang-grid">
+        <div class="lang-chip">🇺🇸 English</div>
+        <div class="lang-chip">🇮🇳 Hindi</div>
+        <div class="lang-chip">🇰🇷 Korean</div>
+        <div class="lang-chip">🇧🇩 Bengali</div>
+        <div class="lang-chip">🇮🇩 Indonesian</div>
+        <div class="lang-chip">🇹🇷 Turkish</div>
+        <div class="lang-chip">🇻🇳 Vietnamese</div>
+        <div class="lang-chip">🇵🇰 Urdu</div>
+        <div class="lang-chip">🇵🇱 Polish</div>
+        <div class="lang-chip">+ More</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALIBRATION -->
+  <section class="showcase sc-dark">
+    <div class="container">
+      <div class="sc-inner">
+        <div class="sc-text">
+          <div class="section-tag">Precision</div>
+          <h2>Calibrate for<br><span class="grad-text">accurate results.</span></h2>
+          <p>Every phone microphone is slightly different. Sound Meter Pro includes a full calibration screen where you can set a known reference level and apply a manual offset to match your device to professional sound level meters.</p>
+          <ul class="check-list">
+            <li>Set reference level (default: 94 dB)</li>
+            <li>Apply manual ±dB calibration offset</li>
+            <li>Live monitoring during calibration</li>
+            <li>Save calibration settings persistently</li>
+            <li>Widely used 94 dB calibration standard supported</li>
+          </ul>
+        </div>
+        <div class="sc-phone">
+          <div class="phone-frame">
+            <img src="Screenshot_20260619_130553.jpg" alt="Microphone calibration screen with 94 dB reference level and start monitoring button">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD CTA -->
+  <section class="cta-section" id="download">
+    <div class="container">
+      <div class="cta-inner">
+        <img src="app-icon.png" alt="Sound Meter Pro app icon" class="cta-icon">
+        <h2>Start measuring <span class="grad-text">right now.</span></h2>
+        <p>Free to download. No sign-up required. Works on any Android device with a microphone.</p>
+        <a href="https://play.google.com/store/apps/details?id=com.happyappsforyou.soundmeterpro" class="badge-btn cta-badge" target="_blank">
+          <svg width="22" height="24" viewBox="0 0 22 24" fill="none"><path d="M1 1.5L13.5 12 1 22.5V1.5Z" fill="white"/><path d="M1 1.5L18 8.5L13.5 12L1 1.5Z" fill="white" opacity="0.7"/><path d="M1 22.5L18 15.5L13.5 12L1 22.5Z" fill="white" opacity="0.7"/><path d="M18 8.5L21 10.5L18 15.5L13.5 12L18 8.5Z" fill="white" opacity="0.5"/></svg>
+          <div class="badge-text"><span class="badge-sub">GET IT ON</span><span class="badge-main">Google Play</span></div>
+        </a>
+        <div class="cta-chips">
+          <span>✅ Free</span>
+          <span>✅ No Sign-Up</span>
+          <span>✅ Works Offline</span>
+          <span>✅ 10+ Languages</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="app-icon.png" alt="Sound Meter Pro" class="footer-icon">
+          <div>
+            <div class="brand-name">Sound<span class="brand-accent">Meter</span> Pro</div>
+            <p>Professional decibel measurement for Android.</p>
+          </div>
+        </div>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 SoundMeter Pro · Decibel meter app · Noise level meter · Sound measurement · dB reader</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="sm-scripts.js"></script>
+</body>
+</html>
